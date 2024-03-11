@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package site;
+
+option go_package = "github.com/huseyinbabal/rapidapp/site";
+option java_package = "com.rapidapp.site";
+
+message SiteResponse {
+  string id = 1;
+  bool wait_list_enabled = 2;
+}
+
+service SiteService {
+  rpc Get(google.protobuf.Empty) returns (SiteResponse) {}
+}

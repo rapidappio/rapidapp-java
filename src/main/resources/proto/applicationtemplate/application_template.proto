@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package applicationtemplate;
+
+option go_package = "github.com/huseyinbabal/rapidapp/applicationtemplate";
+option java_package = "com.rapidapp.applicationtemplate";
+
+message SearchRequest {
+  string name = 1;
+}
+
+message ApplicationTemplate {
+  string name = 1;
+}
+
+message ApplicationTemplateList {
+  repeated ApplicationTemplate items = 1;
+}
+
+service ApplicationTemplateService {
+  rpc List(SearchRequest) returns (ApplicationTemplateList) {}
+}

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package user;
+
+option go_package = "github.com/huseyinbabal/rapidapp/user";
+option java_package = "com.rapidapp.user";
+
+message CreateUserRequest {
+  string access_token = 1;
+}
+
+message Organization {
+  string id = 1;
+  string name = 2;
+  string plan = 3;
+}
+
+message UserResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string avatar_url = 4;
+  bool enabled = 6;
+  string reason = 7;
+  Organization organization = 5;
+}
+
+service UserService {
+  rpc CreateUser(CreateUserRequest) returns (google.protobuf.Empty) {}
+  rpc Me(google.protobuf.Empty) returns (UserResponse) {}
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package checkout;
+
+option go_package = "github.com/huseyinbabal/rapidapp/checkout";
+option java_package = "com.rapidapp.checkout";
+
+message CreateCheckoutSessionRequest {
+  string plan = 1;
+}
+
+message CheckoutSessionResponse {
+  string id = 1;
+  string url = 2;
+}
+
+message PortalSessionResponse {
+  string url = 1;
+}
+
+service CheckoutService {
+  rpc CreateCheckoutSession(CreateCheckoutSessionRequest) returns (CheckoutSessionResponse) {}
+  rpc CreatePortalSession(google.protobuf.Empty) returns (PortalSessionResponse) {}
+}

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package apikey;
+
+option go_package = "github.com/huseyinbabal/rapidapp/apikey";
+option java_package = "com.rapidapp.apikey";
+
+message CreateApiKeyRequest {
+  string name = 1;
+}
+
+message DeleteApiKeyRequest {
+  string id = 1;
+}
+
+message ApiKey {
+  string id = 1;
+  string api_key = 2;
+  string name = 3;
+}
+
+message ApiKeyList {
+  repeated ApiKey items = 1;
+}
+
+service ApiKeyService {
+  rpc Create(CreateApiKeyRequest) returns (ApiKey) {}
+  rpc List(google.protobuf.Empty) returns (ApiKeyList) {}
+  rpc Delete(DeleteApiKeyRequest) returns (google.protobuf.Empty) {}
+}
