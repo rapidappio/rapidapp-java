@@ -1,4 +1,4 @@
-package com.rapidapp.applicationtemplate;
+package io.rapidapp.applicationtemplate;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class ApplicationTemplateServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "applicationtemplate.ApplicationTemplateService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
-      com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
+      io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest.class,
-      responseType = com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList.class,
+      requestType = io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest.class,
+      responseType = io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
-      com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest, com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
+      io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest, io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> getListMethod;
     if ((getListMethod = ApplicationTemplateServiceGrpc.getListMethod) == null) {
       synchronized (ApplicationTemplateServiceGrpc.class) {
         if ((getListMethod = ApplicationTemplateServiceGrpc.getListMethod) == null) {
           ApplicationTemplateServiceGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest, com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest, io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest.getDefaultInstance()))
+                  io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList.getDefaultInstance()))
+                  io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList.getDefaultInstance()))
               .setSchemaDescriptor(new ApplicationTemplateServiceMethodDescriptorSupplier("List"))
               .build();
         }
@@ -96,8 +96,8 @@ public final class ApplicationTemplateServiceGrpc {
 
     /**
      */
-    default void list(com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> responseObserver) {
+    default void list(io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
   }
@@ -131,8 +131,8 @@ public final class ApplicationTemplateServiceGrpc {
 
     /**
      */
-    public void list(com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> responseObserver) {
+    public void list(io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +156,7 @@ public final class ApplicationTemplateServiceGrpc {
 
     /**
      */
-    public com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList list(com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request) {
+    public io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList list(io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
@@ -180,8 +180,8 @@ public final class ApplicationTemplateServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> list(
-        com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList> list(
+        io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
@@ -207,8 +207,8 @@ public final class ApplicationTemplateServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LIST:
-          serviceImpl.list((com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>) responseObserver);
+          serviceImpl.list((io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,8 +232,8 @@ public final class ApplicationTemplateServiceGrpc {
           getListMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
-              com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>(
+              io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.SearchRequest,
+              io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.ApplicationTemplateList>(
                 service, METHODID_LIST)))
         .build();
   }
@@ -244,7 +244,7 @@ public final class ApplicationTemplateServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.getDescriptor();
+      return io.rapidapp.applicationtemplate.ApplicationTemplateOuterClass.getDescriptor();
     }
 
     @java.lang.Override

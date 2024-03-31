@@ -1,4 +1,4 @@
-package com.rapidapp.postgres;
+package io.rapidapp.postgres;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class PostgresServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "postgres.PostgresService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.CreateRequest,
-      com.google.protobuf.Empty> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.CreateRequest,
+      io.rapidapp.postgres.PostgresOuterClass.PostgresId> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = com.rapidapp.postgres.PostgresOuterClass.CreateRequest.class,
-      responseType = com.google.protobuf.Empty.class,
+      requestType = io.rapidapp.postgres.PostgresOuterClass.CreateRequest.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.PostgresId.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.CreateRequest,
-      com.google.protobuf.Empty> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.CreateRequest, com.google.protobuf.Empty> getCreateMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.CreateRequest,
+      io.rapidapp.postgres.PostgresOuterClass.PostgresId> getCreateMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.CreateRequest, io.rapidapp.postgres.PostgresOuterClass.PostgresId> getCreateMethod;
     if ((getCreateMethod = PostgresServiceGrpc.getCreateMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getCreateMethod = PostgresServiceGrpc.getCreateMethod) == null) {
           PostgresServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.postgres.PostgresOuterClass.CreateRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.postgres.PostgresOuterClass.CreateRequest, io.rapidapp.postgres.PostgresOuterClass.PostgresId>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.CreateRequest.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.CreateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.PostgresId.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("Create"))
               .build();
         }
@@ -47,28 +47,28 @@ public final class PostgresServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod;
+      io.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.postgres.PostgresOuterClass.PostgresList.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.PostgresList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod;
+      io.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.postgres.PostgresOuterClass.PostgresList> getListMethod;
     if ((getListMethod = PostgresServiceGrpc.getListMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getListMethod = PostgresServiceGrpc.getListMethod) == null) {
           PostgresServiceGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.postgres.PostgresOuterClass.PostgresList>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.postgres.PostgresOuterClass.PostgresList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.PostgresList.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.PostgresList.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("List"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class PostgresServiceGrpc {
     return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
-      requestType = com.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
-      responseType = com.rapidapp.postgres.PostgresOuterClass.Postgres.class,
+      requestType = io.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.Postgres.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.Postgres> getGetMethod;
     if ((getGetMethod = PostgresServiceGrpc.getGetMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getGetMethod = PostgresServiceGrpc.getGetMethod) == null) {
           PostgresServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.Postgres>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.Postgres>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.Postgres.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.Postgres.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -108,27 +108,27 @@ public final class PostgresServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
       com.google.protobuf.Empty> getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
-      requestType = com.rapidapp.postgres.PostgresOuterClass.DeleteRequest.class,
+      requestType = io.rapidapp.postgres.PostgresOuterClass.DeleteRequest.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
+  public static io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
       com.google.protobuf.Empty> getDeleteMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.DeleteRequest, com.google.protobuf.Empty> getDeleteMethod;
+    io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.DeleteRequest, com.google.protobuf.Empty> getDeleteMethod;
     if ((getDeleteMethod = PostgresServiceGrpc.getDeleteMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getDeleteMethod = PostgresServiceGrpc.getDeleteMethod) == null) {
           PostgresServiceGrpc.getDeleteMethod = getDeleteMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.postgres.PostgresOuterClass.DeleteRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.postgres.PostgresOuterClass.DeleteRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.DeleteRequest.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.DeleteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("Delete"))
@@ -140,28 +140,28 @@ public final class PostgresServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod;
+      io.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "AdminList",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.postgres.PostgresOuterClass.PostgresList.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.PostgresList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod;
+      io.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.postgres.PostgresOuterClass.PostgresList> getAdminListMethod;
     if ((getAdminListMethod = PostgresServiceGrpc.getAdminListMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getAdminListMethod = PostgresServiceGrpc.getAdminListMethod) == null) {
           PostgresServiceGrpc.getAdminListMethod = getAdminListMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.postgres.PostgresOuterClass.PostgresList>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.postgres.PostgresOuterClass.PostgresList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdminList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.PostgresList.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.PostgresList.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("AdminList"))
               .build();
         }
@@ -170,29 +170,29 @@ public final class PostgresServiceGrpc {
     return getAdminListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetStatistics",
-      requestType = com.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
-      responseType = com.rapidapp.postgres.PostgresOuterClass.Statistics.class,
+      requestType = io.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.Statistics.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.Statistics> getGetStatisticsMethod;
     if ((getGetStatisticsMethod = PostgresServiceGrpc.getGetStatisticsMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getGetStatisticsMethod = PostgresServiceGrpc.getGetStatisticsMethod) == null) {
           PostgresServiceGrpc.getGetStatisticsMethod = getGetStatisticsMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.Statistics>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.Statistics>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatistics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.Statistics.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.Statistics.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("GetStatistics"))
               .build();
         }
@@ -201,29 +201,29 @@ public final class PostgresServiceGrpc {
     return getGetStatisticsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetActiveConnections",
-      requestType = com.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
-      responseType = com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList.class,
+      requestType = io.rapidapp.postgres.PostgresOuterClass.GetRequest.class,
+      responseType = io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-      com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+      io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getGetActiveConnectionsMethod;
     if ((getGetActiveConnectionsMethod = PostgresServiceGrpc.getGetActiveConnectionsMethod) == null) {
       synchronized (PostgresServiceGrpc.class) {
         if ((getGetActiveConnectionsMethod = PostgresServiceGrpc.getGetActiveConnectionsMethod) == null) {
           PostgresServiceGrpc.getGetActiveConnectionsMethod = getGetActiveConnectionsMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.postgres.PostgresOuterClass.GetRequest, com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.postgres.PostgresOuterClass.GetRequest, io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetActiveConnections"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.GetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList.getDefaultInstance()))
+                  io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList.getDefaultInstance()))
               .setSchemaDescriptor(new PostgresServiceMethodDescriptorSupplier("GetActiveConnections"))
               .build();
         }
@@ -282,28 +282,28 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    default void create(com.rapidapp.postgres.PostgresOuterClass.CreateRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+    default void create(io.rapidapp.postgres.PostgresOuterClass.CreateRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresId> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     default void list(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      */
-    default void get(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Postgres> responseObserver) {
+    default void get(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Postgres> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
      */
-    default void delete(com.rapidapp.postgres.PostgresOuterClass.DeleteRequest request,
+    default void delete(io.rapidapp.postgres.PostgresOuterClass.DeleteRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
@@ -311,21 +311,21 @@ public final class PostgresServiceGrpc {
     /**
      */
     default void adminList(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAdminListMethod(), responseObserver);
     }
 
     /**
      */
-    default void getStatistics(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Statistics> responseObserver) {
+    default void getStatistics(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Statistics> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatisticsMethod(), responseObserver);
     }
 
     /**
      */
-    default void getActiveConnections(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> responseObserver) {
+    default void getActiveConnections(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetActiveConnectionsMethod(), responseObserver);
     }
   }
@@ -359,8 +359,8 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    public void create(com.rapidapp.postgres.PostgresOuterClass.CreateRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+    public void create(io.rapidapp.postgres.PostgresOuterClass.CreateRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresId> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -368,22 +368,22 @@ public final class PostgresServiceGrpc {
     /**
      */
     public void list(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void get(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Postgres> responseObserver) {
+    public void get(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Postgres> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void delete(com.rapidapp.postgres.PostgresOuterClass.DeleteRequest request,
+    public void delete(io.rapidapp.postgres.PostgresOuterClass.DeleteRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
@@ -392,23 +392,23 @@ public final class PostgresServiceGrpc {
     /**
      */
     public void adminList(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAdminListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getStatistics(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Statistics> responseObserver) {
+    public void getStatistics(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Statistics> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetStatisticsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getActiveConnections(com.rapidapp.postgres.PostgresOuterClass.GetRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> responseObserver) {
+    public void getActiveConnections(io.rapidapp.postgres.PostgresOuterClass.GetRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetActiveConnectionsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -432,49 +432,49 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty create(com.rapidapp.postgres.PostgresOuterClass.CreateRequest request) {
+    public io.rapidapp.postgres.PostgresOuterClass.PostgresId create(io.rapidapp.postgres.PostgresOuterClass.CreateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.postgres.PostgresOuterClass.PostgresList list(com.google.protobuf.Empty request) {
+    public io.rapidapp.postgres.PostgresOuterClass.PostgresList list(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.postgres.PostgresOuterClass.Postgres get(com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public io.rapidapp.postgres.PostgresOuterClass.Postgres get(io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.google.protobuf.Empty delete(com.rapidapp.postgres.PostgresOuterClass.DeleteRequest request) {
+    public com.google.protobuf.Empty delete(io.rapidapp.postgres.PostgresOuterClass.DeleteRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.postgres.PostgresOuterClass.PostgresList adminList(com.google.protobuf.Empty request) {
+    public io.rapidapp.postgres.PostgresOuterClass.PostgresList adminList(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAdminListMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.postgres.PostgresOuterClass.Statistics getStatistics(com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public io.rapidapp.postgres.PostgresOuterClass.Statistics getStatistics(io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStatisticsMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList getActiveConnections(com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList getActiveConnections(io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetActiveConnectionsMethod(), getCallOptions(), request);
     }
@@ -498,15 +498,15 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> create(
-        com.rapidapp.postgres.PostgresOuterClass.CreateRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.PostgresId> create(
+        io.rapidapp.postgres.PostgresOuterClass.CreateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.postgres.PostgresOuterClass.PostgresList> list(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.PostgresList> list(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
@@ -514,8 +514,8 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.postgres.PostgresOuterClass.Postgres> get(
-        com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.Postgres> get(
+        io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
@@ -523,14 +523,14 @@ public final class PostgresServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
-        com.rapidapp.postgres.PostgresOuterClass.DeleteRequest request) {
+        io.rapidapp.postgres.PostgresOuterClass.DeleteRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.postgres.PostgresOuterClass.PostgresList> adminList(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.PostgresList> adminList(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAdminListMethod(), getCallOptions()), request);
@@ -538,16 +538,16 @@ public final class PostgresServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.postgres.PostgresOuterClass.Statistics> getStatistics(
-        com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.Statistics> getStatistics(
+        io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetStatisticsMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getActiveConnections(
-        com.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList> getActiveConnections(
+        io.rapidapp.postgres.PostgresOuterClass.GetRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetActiveConnectionsMethod(), getCallOptions()), request);
     }
@@ -579,32 +579,32 @@ public final class PostgresServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE:
-          serviceImpl.create((com.rapidapp.postgres.PostgresOuterClass.CreateRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          serviceImpl.create((io.rapidapp.postgres.PostgresOuterClass.CreateRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresId>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList>) responseObserver);
           break;
         case METHODID_GET:
-          serviceImpl.get((com.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Postgres>) responseObserver);
+          serviceImpl.get((io.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Postgres>) responseObserver);
           break;
         case METHODID_DELETE:
-          serviceImpl.delete((com.rapidapp.postgres.PostgresOuterClass.DeleteRequest) request,
+          serviceImpl.delete((io.rapidapp.postgres.PostgresOuterClass.DeleteRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_ADMIN_LIST:
           serviceImpl.adminList((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.PostgresList>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.PostgresList>) responseObserver);
           break;
         case METHODID_GET_STATISTICS:
-          serviceImpl.getStatistics((com.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.Statistics>) responseObserver);
+          serviceImpl.getStatistics((io.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.Statistics>) responseObserver);
           break;
         case METHODID_GET_ACTIVE_CONNECTIONS:
-          serviceImpl.getActiveConnections((com.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>) responseObserver);
+          serviceImpl.getActiveConnections((io.rapidapp.postgres.PostgresOuterClass.GetRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -628,28 +628,28 @@ public final class PostgresServiceGrpc {
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.postgres.PostgresOuterClass.CreateRequest,
-              com.google.protobuf.Empty>(
+              io.rapidapp.postgres.PostgresOuterClass.CreateRequest,
+              io.rapidapp.postgres.PostgresOuterClass.PostgresId>(
                 service, METHODID_CREATE)))
         .addMethod(
           getListMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.postgres.PostgresOuterClass.PostgresList>(
+              io.rapidapp.postgres.PostgresOuterClass.PostgresList>(
                 service, METHODID_LIST)))
         .addMethod(
           getGetMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-              com.rapidapp.postgres.PostgresOuterClass.Postgres>(
+              io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+              io.rapidapp.postgres.PostgresOuterClass.Postgres>(
                 service, METHODID_GET)))
         .addMethod(
           getDeleteMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
+              io.rapidapp.postgres.PostgresOuterClass.DeleteRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE)))
         .addMethod(
@@ -657,21 +657,21 @@ public final class PostgresServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.postgres.PostgresOuterClass.PostgresList>(
+              io.rapidapp.postgres.PostgresOuterClass.PostgresList>(
                 service, METHODID_ADMIN_LIST)))
         .addMethod(
           getGetStatisticsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-              com.rapidapp.postgres.PostgresOuterClass.Statistics>(
+              io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+              io.rapidapp.postgres.PostgresOuterClass.Statistics>(
                 service, METHODID_GET_STATISTICS)))
         .addMethod(
           getGetActiveConnectionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.postgres.PostgresOuterClass.GetRequest,
-              com.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>(
+              io.rapidapp.postgres.PostgresOuterClass.GetRequest,
+              io.rapidapp.postgres.PostgresOuterClass.ActiveConnectionList>(
                 service, METHODID_GET_ACTIVE_CONNECTIONS)))
         .build();
   }
@@ -682,7 +682,7 @@ public final class PostgresServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.postgres.PostgresOuterClass.getDescriptor();
+      return io.rapidapp.postgres.PostgresOuterClass.getDescriptor();
     }
 
     @java.lang.Override

@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 package checkout;
 
 option go_package = "github.com/huseyinbabal/rapidapp/checkout";
-option java_package = "com.rapidapp.checkout";
+option java_package = "io.rapidapp.checkout";
 
 message CreateCheckoutSessionRequest {
   string plan = 1;

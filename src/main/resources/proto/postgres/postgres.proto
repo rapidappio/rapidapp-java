@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 package postgres;
 
 option go_package = "github.com/rapidappio/rapidapp/postgres";
-option java_package = "com.rapidapp.postgres";
+option java_package = "io.rapidapp.postgres";
 
 message CreateRequest {
   string name = 1;
@@ -42,6 +42,10 @@ message DeleteRequest {
   string id = 1;
 }
 
+message PostgresId {
+  string id = 1;
+}
+
 message Statistics {
   string version = 1;
   int64 transactionPerSecond = 2;
@@ -61,7 +65,7 @@ message ActiveConnectionList {
 }
 
 service PostgresService {
-  rpc Create(CreateRequest) returns (google.protobuf.Empty) {}
+  rpc Create(CreateRequest) returns (PostgresId) {}
   rpc List(google.protobuf.Empty) returns (PostgresList) {}
   rpc Get(GetRequest) returns (Postgres) {}
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {}

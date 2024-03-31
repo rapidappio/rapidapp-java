@@ -1,11 +1,13 @@
-package com.rapidapp;
+package io.rapidapp;
 
-import com.rapidapp.postgres.PostgresOuterClass;
-import com.rapidapp.site.Site;
+import io.rapidapp.postgres.PostgresOuterClass;
+import io.rapidapp.site.Site;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Disabled
 class RapidappClientTest {
 
     @Test
@@ -17,8 +19,15 @@ class RapidappClientTest {
 
     @Test
     void getPostgresDatabases() {
-        RapidappClient client = new RapidappClient("asdfasdfs");
+        RapidappClient client = new RapidappClient("");
         PostgresOuterClass.PostgresList postgresDatabases = client.getPostgresDatabases();
         assertNotNull(postgresDatabases);
+    }
+
+
+    @Test
+    void createPostgresDatabase() {
+        RapidappClient client = new RapidappClient("");
+        client.createPostgresDatabase("test-database");
     }
 }

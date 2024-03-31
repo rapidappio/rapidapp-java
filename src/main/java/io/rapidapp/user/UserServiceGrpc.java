@@ -1,4 +1,4 @@
-package com.rapidapp.user;
+package io.rapidapp.user;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,27 +15,27 @@ public final class UserServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "user.UserService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.user.User.CreateUserRequest,
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.user.User.CreateUserRequest,
       com.google.protobuf.Empty> getCreateUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateUser",
-      requestType = com.rapidapp.user.User.CreateUserRequest.class,
+      requestType = io.rapidapp.user.User.CreateUserRequest.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.user.User.CreateUserRequest,
+  public static io.grpc.MethodDescriptor<io.rapidapp.user.User.CreateUserRequest,
       com.google.protobuf.Empty> getCreateUserMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.user.User.CreateUserRequest, com.google.protobuf.Empty> getCreateUserMethod;
+    io.grpc.MethodDescriptor<io.rapidapp.user.User.CreateUserRequest, com.google.protobuf.Empty> getCreateUserMethod;
     if ((getCreateUserMethod = UserServiceGrpc.getCreateUserMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getCreateUserMethod = UserServiceGrpc.getCreateUserMethod) == null) {
           UserServiceGrpc.getCreateUserMethod = getCreateUserMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.user.User.CreateUserRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.user.User.CreateUserRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.user.User.CreateUserRequest.getDefaultInstance()))
+                  io.rapidapp.user.User.CreateUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("CreateUser"))
@@ -47,28 +47,28 @@ public final class UserServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.user.User.UserResponse> getMeMethod;
+      io.rapidapp.user.User.UserResponse> getMeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Me",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.user.User.UserResponse.class,
+      responseType = io.rapidapp.user.User.UserResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.user.User.UserResponse> getMeMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.user.User.UserResponse> getMeMethod;
+      io.rapidapp.user.User.UserResponse> getMeMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.user.User.UserResponse> getMeMethod;
     if ((getMeMethod = UserServiceGrpc.getMeMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getMeMethod = UserServiceGrpc.getMeMethod) == null) {
           UserServiceGrpc.getMeMethod = getMeMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.user.User.UserResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.user.User.UserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Me"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.user.User.UserResponse.getDefaultInstance()))
+                  io.rapidapp.user.User.UserResponse.getDefaultInstance()))
               .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("Me"))
               .build();
         }
@@ -127,7 +127,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    default void createUser(com.rapidapp.user.User.CreateUserRequest request,
+    default void createUser(io.rapidapp.user.User.CreateUserRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
@@ -135,7 +135,7 @@ public final class UserServiceGrpc {
     /**
      */
     default void me(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.user.User.UserResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.user.User.UserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMeMethod(), responseObserver);
     }
   }
@@ -169,7 +169,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void createUser(com.rapidapp.user.User.CreateUserRequest request,
+    public void createUser(io.rapidapp.user.User.CreateUserRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request, responseObserver);
@@ -178,7 +178,7 @@ public final class UserServiceGrpc {
     /**
      */
     public void me(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.user.User.UserResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.user.User.UserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMeMethod(), getCallOptions()), request, responseObserver);
     }
@@ -202,14 +202,14 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty createUser(com.rapidapp.user.User.CreateUserRequest request) {
+    public com.google.protobuf.Empty createUser(io.rapidapp.user.User.CreateUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.user.User.UserResponse me(com.google.protobuf.Empty request) {
+    public io.rapidapp.user.User.UserResponse me(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMeMethod(), getCallOptions(), request);
     }
@@ -234,14 +234,14 @@ public final class UserServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createUser(
-        com.rapidapp.user.User.CreateUserRequest request) {
+        io.rapidapp.user.User.CreateUserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.user.User.UserResponse> me(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.user.User.UserResponse> me(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMeMethod(), getCallOptions()), request);
@@ -269,12 +269,12 @@ public final class UserServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_USER:
-          serviceImpl.createUser((com.rapidapp.user.User.CreateUserRequest) request,
+          serviceImpl.createUser((io.rapidapp.user.User.CreateUserRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_ME:
           serviceImpl.me((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.user.User.UserResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.user.User.UserResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -298,7 +298,7 @@ public final class UserServiceGrpc {
           getCreateUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.user.User.CreateUserRequest,
+              io.rapidapp.user.User.CreateUserRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_CREATE_USER)))
         .addMethod(
@@ -306,7 +306,7 @@ public final class UserServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.user.User.UserResponse>(
+              io.rapidapp.user.User.UserResponse>(
                 service, METHODID_ME)))
         .build();
   }
@@ -317,7 +317,7 @@ public final class UserServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.user.User.getDescriptor();
+      return io.rapidapp.user.User.getDescriptor();
     }
 
     @java.lang.Override

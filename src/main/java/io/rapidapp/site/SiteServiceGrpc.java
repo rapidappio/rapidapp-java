@@ -1,4 +1,4 @@
-package com.rapidapp.site;
+package io.rapidapp.site;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -16,28 +16,28 @@ public final class SiteServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.site.Site.SiteResponse> getGetMethod;
+      io.rapidapp.site.Site.SiteResponse> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.site.Site.SiteResponse.class,
+      responseType = io.rapidapp.site.Site.SiteResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.site.Site.SiteResponse> getGetMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.site.Site.SiteResponse> getGetMethod;
+      io.rapidapp.site.Site.SiteResponse> getGetMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.site.Site.SiteResponse> getGetMethod;
     if ((getGetMethod = SiteServiceGrpc.getGetMethod) == null) {
       synchronized (SiteServiceGrpc.class) {
         if ((getGetMethod = SiteServiceGrpc.getGetMethod) == null) {
           SiteServiceGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.site.Site.SiteResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.site.Site.SiteResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.site.Site.SiteResponse.getDefaultInstance()))
+                  io.rapidapp.site.Site.SiteResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SiteServiceMethodDescriptorSupplier("Get"))
               .build();
         }
@@ -97,7 +97,7 @@ public final class SiteServiceGrpc {
     /**
      */
     default void get(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.site.Site.SiteResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.site.Site.SiteResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
   }
@@ -132,7 +132,7 @@ public final class SiteServiceGrpc {
     /**
      */
     public void get(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.site.Site.SiteResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.site.Site.SiteResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +156,7 @@ public final class SiteServiceGrpc {
 
     /**
      */
-    public com.rapidapp.site.Site.SiteResponse get(com.google.protobuf.Empty request) {
+    public io.rapidapp.site.Site.SiteResponse get(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -180,7 +180,7 @@ public final class SiteServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.site.Site.SiteResponse> get(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.site.Site.SiteResponse> get(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
@@ -208,7 +208,7 @@ public final class SiteServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.site.Site.SiteResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.site.Site.SiteResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -233,7 +233,7 @@ public final class SiteServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.site.Site.SiteResponse>(
+              io.rapidapp.site.Site.SiteResponse>(
                 service, METHODID_GET)))
         .build();
   }
@@ -244,7 +244,7 @@ public final class SiteServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.site.Site.getDescriptor();
+      return io.rapidapp.site.Site.getDescriptor();
     }
 
     @java.lang.Override

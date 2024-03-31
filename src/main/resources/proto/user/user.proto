@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 package user;
 
 option go_package = "github.com/huseyinbabal/rapidapp/user";
-option java_package = "com.rapidapp.user";
+option java_package = "io.rapidapp.user";
 
 message CreateUserRequest {
   string access_token = 1;

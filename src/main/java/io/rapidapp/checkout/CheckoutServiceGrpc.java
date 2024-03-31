@@ -1,4 +1,4 @@
-package com.rapidapp.checkout;
+package io.rapidapp.checkout;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class CheckoutServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "checkout.CheckoutService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
-      com.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
+      io.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateCheckoutSession",
-      requestType = com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest.class,
-      responseType = com.rapidapp.checkout.Checkout.CheckoutSessionResponse.class,
+      requestType = io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest.class,
+      responseType = io.rapidapp.checkout.Checkout.CheckoutSessionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
-      com.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest, com.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
+      io.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest, io.rapidapp.checkout.Checkout.CheckoutSessionResponse> getCreateCheckoutSessionMethod;
     if ((getCreateCheckoutSessionMethod = CheckoutServiceGrpc.getCreateCheckoutSessionMethod) == null) {
       synchronized (CheckoutServiceGrpc.class) {
         if ((getCreateCheckoutSessionMethod = CheckoutServiceGrpc.getCreateCheckoutSessionMethod) == null) {
           CheckoutServiceGrpc.getCreateCheckoutSessionMethod = getCreateCheckoutSessionMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest, com.rapidapp.checkout.Checkout.CheckoutSessionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest, io.rapidapp.checkout.Checkout.CheckoutSessionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCheckoutSession"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest.getDefaultInstance()))
+                  io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.checkout.Checkout.CheckoutSessionResponse.getDefaultInstance()))
+                  io.rapidapp.checkout.Checkout.CheckoutSessionResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CheckoutServiceMethodDescriptorSupplier("CreateCheckoutSession"))
               .build();
         }
@@ -47,28 +47,28 @@ public final class CheckoutServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod;
+      io.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreatePortalSession",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.checkout.Checkout.PortalSessionResponse.class,
+      responseType = io.rapidapp.checkout.Checkout.PortalSessionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod;
+      io.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.checkout.Checkout.PortalSessionResponse> getCreatePortalSessionMethod;
     if ((getCreatePortalSessionMethod = CheckoutServiceGrpc.getCreatePortalSessionMethod) == null) {
       synchronized (CheckoutServiceGrpc.class) {
         if ((getCreatePortalSessionMethod = CheckoutServiceGrpc.getCreatePortalSessionMethod) == null) {
           CheckoutServiceGrpc.getCreatePortalSessionMethod = getCreatePortalSessionMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.checkout.Checkout.PortalSessionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.checkout.Checkout.PortalSessionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePortalSession"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.checkout.Checkout.PortalSessionResponse.getDefaultInstance()))
+                  io.rapidapp.checkout.Checkout.PortalSessionResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CheckoutServiceMethodDescriptorSupplier("CreatePortalSession"))
               .build();
         }
@@ -127,15 +127,15 @@ public final class CheckoutServiceGrpc {
 
     /**
      */
-    default void createCheckoutSession(com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.CheckoutSessionResponse> responseObserver) {
+    default void createCheckoutSession(io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.CheckoutSessionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCheckoutSessionMethod(), responseObserver);
     }
 
     /**
      */
     default void createPortalSession(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.PortalSessionResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.PortalSessionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePortalSessionMethod(), responseObserver);
     }
   }
@@ -169,8 +169,8 @@ public final class CheckoutServiceGrpc {
 
     /**
      */
-    public void createCheckoutSession(com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.CheckoutSessionResponse> responseObserver) {
+    public void createCheckoutSession(io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.CheckoutSessionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCheckoutSessionMethod(), getCallOptions()), request, responseObserver);
     }
@@ -178,7 +178,7 @@ public final class CheckoutServiceGrpc {
     /**
      */
     public void createPortalSession(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.PortalSessionResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.PortalSessionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreatePortalSessionMethod(), getCallOptions()), request, responseObserver);
     }
@@ -202,14 +202,14 @@ public final class CheckoutServiceGrpc {
 
     /**
      */
-    public com.rapidapp.checkout.Checkout.CheckoutSessionResponse createCheckoutSession(com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request) {
+    public io.rapidapp.checkout.Checkout.CheckoutSessionResponse createCheckoutSession(io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCheckoutSessionMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.checkout.Checkout.PortalSessionResponse createPortalSession(com.google.protobuf.Empty request) {
+    public io.rapidapp.checkout.Checkout.PortalSessionResponse createPortalSession(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreatePortalSessionMethod(), getCallOptions(), request);
     }
@@ -233,15 +233,15 @@ public final class CheckoutServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.checkout.Checkout.CheckoutSessionResponse> createCheckoutSession(
-        com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.checkout.Checkout.CheckoutSessionResponse> createCheckoutSession(
+        io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCheckoutSessionMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.checkout.Checkout.PortalSessionResponse> createPortalSession(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.checkout.Checkout.PortalSessionResponse> createPortalSession(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreatePortalSessionMethod(), getCallOptions()), request);
@@ -269,12 +269,12 @@ public final class CheckoutServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_CHECKOUT_SESSION:
-          serviceImpl.createCheckoutSession((com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.CheckoutSessionResponse>) responseObserver);
+          serviceImpl.createCheckoutSession((io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.CheckoutSessionResponse>) responseObserver);
           break;
         case METHODID_CREATE_PORTAL_SESSION:
           serviceImpl.createPortalSession((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.checkout.Checkout.PortalSessionResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.checkout.Checkout.PortalSessionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -298,15 +298,15 @@ public final class CheckoutServiceGrpc {
           getCreateCheckoutSessionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
-              com.rapidapp.checkout.Checkout.CheckoutSessionResponse>(
+              io.rapidapp.checkout.Checkout.CreateCheckoutSessionRequest,
+              io.rapidapp.checkout.Checkout.CheckoutSessionResponse>(
                 service, METHODID_CREATE_CHECKOUT_SESSION)))
         .addMethod(
           getCreatePortalSessionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.checkout.Checkout.PortalSessionResponse>(
+              io.rapidapp.checkout.Checkout.PortalSessionResponse>(
                 service, METHODID_CREATE_PORTAL_SESSION)))
         .build();
   }
@@ -317,7 +317,7 @@ public final class CheckoutServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.checkout.Checkout.getDescriptor();
+      return io.rapidapp.checkout.Checkout.getDescriptor();
     }
 
     @java.lang.Override

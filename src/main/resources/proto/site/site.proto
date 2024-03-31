@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 package site;
 
 option go_package = "github.com/huseyinbabal/rapidapp/site";
-option java_package = "com.rapidapp.site";
+option java_package = "io.rapidapp.site";
 
 message SiteResponse {
   string id = 1;

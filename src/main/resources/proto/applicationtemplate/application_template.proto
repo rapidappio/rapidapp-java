@@ -3,7 +3,7 @@ syntax = "proto3";
 package applicationtemplate;
 
 option go_package = "github.com/huseyinbabal/rapidapp/applicationtemplate";
-option java_package = "com.rapidapp.applicationtemplate";
+option java_package = "io.rapidapp.applicationtemplate";
 
 message SearchRequest {
   string name = 1;

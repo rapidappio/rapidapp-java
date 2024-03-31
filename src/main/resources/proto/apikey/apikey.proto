@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 package apikey;
 
 option go_package = "github.com/huseyinbabal/rapidapp/apikey";
-option java_package = "com.rapidapp.apikey";
+option java_package = "io.rapidapp.apikey";
 
 message CreateApiKeyRequest {
   string name = 1;

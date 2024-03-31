@@ -1,12 +1,10 @@
-package com.rapidapp;
+package io.rapidapp;
 
 import com.google.protobuf.Empty;
-import com.rapidapp.postgres.PostgresOuterClass;
-import com.rapidapp.site.Site;
-import com.rapidapp.site.SiteServiceGrpc;
-import com.rapidapp.postgres.PostgresOuterClass.Postgres;
-import com.rapidapp.postgres.PostgresServiceGrpc;
-
+import io.rapidapp.postgres.PostgresOuterClass;
+import io.rapidapp.postgres.PostgresServiceGrpc;
+import io.rapidapp.site.Site;
+import io.rapidapp.site.SiteServiceGrpc;
 import io.grpc.*;
 
 public class RapidappClient {
@@ -35,6 +33,26 @@ public class RapidappClient {
                 .build();
         PostgresServiceGrpc.PostgresServiceBlockingStub stub = PostgresServiceGrpc.newBlockingStub(channel);
         return stub.list(Empty.newBuilder().build());
+    }
+
+    public PostgresOuterClass.PostgresId createPostgresDatabase(String name) {
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(API_URL, API_PORT)
+                .useTransportSecurity()
+                .intercept(new ApiKeyInterceptor(apiKey))
+                .build();
+        PostgresServiceGrpc.PostgresServiceBlockingStub stub = PostgresServiceGrpc.newBlockingStub(channel);
+        PostgresOuterClass.PostgresId postgresId = stub.create(PostgresOuterClass.CreateRequest.newBuilder().setName(name).build());
+        return postgresId;
+    }
+
+    public PostgresOuterClass.Postgres getPostgresDatabase(String id) {
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(API_URL, API_PORT)
+                .useTransportSecurity()
+                .intercept(new ApiKeyInterceptor(apiKey))
+                .build();
+        PostgresServiceGrpc.PostgresServiceBlockingStub stub = PostgresServiceGrpc.newBlockingStub(channel);
+        PostgresOuterClass.Postgres postgres = stub.get(PostgresOuterClass.GetRequest.newBuilder().setId(id).build());
+        return postgres;
     }
 }
 

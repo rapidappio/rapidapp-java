@@ -1,4 +1,4 @@
-package com.rapidapp.apikey;
+package io.rapidapp.apikey;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class ApiKeyServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "apikey.ApiKeyService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.CreateApiKeyRequest,
-      com.rapidapp.apikey.Apikey.ApiKey> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.CreateApiKeyRequest,
+      io.rapidapp.apikey.Apikey.ApiKey> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = com.rapidapp.apikey.Apikey.CreateApiKeyRequest.class,
-      responseType = com.rapidapp.apikey.Apikey.ApiKey.class,
+      requestType = io.rapidapp.apikey.Apikey.CreateApiKeyRequest.class,
+      responseType = io.rapidapp.apikey.Apikey.ApiKey.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.CreateApiKeyRequest,
-      com.rapidapp.apikey.Apikey.ApiKey> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.CreateApiKeyRequest, com.rapidapp.apikey.Apikey.ApiKey> getCreateMethod;
+  public static io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.CreateApiKeyRequest,
+      io.rapidapp.apikey.Apikey.ApiKey> getCreateMethod() {
+    io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.CreateApiKeyRequest, io.rapidapp.apikey.Apikey.ApiKey> getCreateMethod;
     if ((getCreateMethod = ApiKeyServiceGrpc.getCreateMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getCreateMethod = ApiKeyServiceGrpc.getCreateMethod) == null) {
           ApiKeyServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.apikey.Apikey.CreateApiKeyRequest, com.rapidapp.apikey.Apikey.ApiKey>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.apikey.Apikey.CreateApiKeyRequest, io.rapidapp.apikey.Apikey.ApiKey>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.apikey.Apikey.CreateApiKeyRequest.getDefaultInstance()))
+                  io.rapidapp.apikey.Apikey.CreateApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.apikey.Apikey.ApiKey.getDefaultInstance()))
+                  io.rapidapp.apikey.Apikey.ApiKey.getDefaultInstance()))
               .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Create"))
               .build();
         }
@@ -47,28 +47,28 @@ public final class ApiKeyServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.apikey.Apikey.ApiKeyList> getListMethod;
+      io.rapidapp.apikey.Apikey.ApiKeyList> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
       requestType = com.google.protobuf.Empty.class,
-      responseType = com.rapidapp.apikey.Apikey.ApiKeyList.class,
+      responseType = io.rapidapp.apikey.Apikey.ApiKeyList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.rapidapp.apikey.Apikey.ApiKeyList> getListMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.rapidapp.apikey.Apikey.ApiKeyList> getListMethod;
+      io.rapidapp.apikey.Apikey.ApiKeyList> getListMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, io.rapidapp.apikey.Apikey.ApiKeyList> getListMethod;
     if ((getListMethod = ApiKeyServiceGrpc.getListMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getListMethod = ApiKeyServiceGrpc.getListMethod) == null) {
           ApiKeyServiceGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.rapidapp.apikey.Apikey.ApiKeyList>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.rapidapp.apikey.Apikey.ApiKeyList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.apikey.Apikey.ApiKeyList.getDefaultInstance()))
+                  io.rapidapp.apikey.Apikey.ApiKeyList.getDefaultInstance()))
               .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("List"))
               .build();
         }
@@ -77,27 +77,27 @@ public final class ApiKeyServiceGrpc {
     return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
+  private static volatile io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
       com.google.protobuf.Empty> getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
-      requestType = com.rapidapp.apikey.Apikey.DeleteApiKeyRequest.class,
+      requestType = io.rapidapp.apikey.Apikey.DeleteApiKeyRequest.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
+  public static io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
       com.google.protobuf.Empty> getDeleteMethod() {
-    io.grpc.MethodDescriptor<com.rapidapp.apikey.Apikey.DeleteApiKeyRequest, com.google.protobuf.Empty> getDeleteMethod;
+    io.grpc.MethodDescriptor<io.rapidapp.apikey.Apikey.DeleteApiKeyRequest, com.google.protobuf.Empty> getDeleteMethod;
     if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
           ApiKeyServiceGrpc.getDeleteMethod = getDeleteMethod =
-              io.grpc.MethodDescriptor.<com.rapidapp.apikey.Apikey.DeleteApiKeyRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<io.rapidapp.apikey.Apikey.DeleteApiKeyRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rapidapp.apikey.Apikey.DeleteApiKeyRequest.getDefaultInstance()))
+                  io.rapidapp.apikey.Apikey.DeleteApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Delete"))
@@ -158,21 +158,21 @@ public final class ApiKeyServiceGrpc {
 
     /**
      */
-    default void create(com.rapidapp.apikey.Apikey.CreateApiKeyRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKey> responseObserver) {
+    default void create(io.rapidapp.apikey.Apikey.CreateApiKeyRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKey> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     default void list(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKeyList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKeyList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     /**
      */
-    default void delete(com.rapidapp.apikey.Apikey.DeleteApiKeyRequest request,
+    default void delete(io.rapidapp.apikey.Apikey.DeleteApiKeyRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
@@ -207,8 +207,8 @@ public final class ApiKeyServiceGrpc {
 
     /**
      */
-    public void create(com.rapidapp.apikey.Apikey.CreateApiKeyRequest request,
-        io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKey> responseObserver) {
+    public void create(io.rapidapp.apikey.Apikey.CreateApiKeyRequest request,
+        io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKey> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -216,14 +216,14 @@ public final class ApiKeyServiceGrpc {
     /**
      */
     public void list(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKeyList> responseObserver) {
+        io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKeyList> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void delete(com.rapidapp.apikey.Apikey.DeleteApiKeyRequest request,
+    public void delete(io.rapidapp.apikey.Apikey.DeleteApiKeyRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
@@ -248,21 +248,21 @@ public final class ApiKeyServiceGrpc {
 
     /**
      */
-    public com.rapidapp.apikey.Apikey.ApiKey create(com.rapidapp.apikey.Apikey.CreateApiKeyRequest request) {
+    public io.rapidapp.apikey.Apikey.ApiKey create(io.rapidapp.apikey.Apikey.CreateApiKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.rapidapp.apikey.Apikey.ApiKeyList list(com.google.protobuf.Empty request) {
+    public io.rapidapp.apikey.Apikey.ApiKeyList list(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.google.protobuf.Empty delete(com.rapidapp.apikey.Apikey.DeleteApiKeyRequest request) {
+    public com.google.protobuf.Empty delete(io.rapidapp.apikey.Apikey.DeleteApiKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
@@ -286,15 +286,15 @@ public final class ApiKeyServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.apikey.Apikey.ApiKey> create(
-        com.rapidapp.apikey.Apikey.CreateApiKeyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.apikey.Apikey.ApiKey> create(
+        io.rapidapp.apikey.Apikey.CreateApiKeyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rapidapp.apikey.Apikey.ApiKeyList> list(
+    public com.google.common.util.concurrent.ListenableFuture<io.rapidapp.apikey.Apikey.ApiKeyList> list(
         com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
@@ -303,7 +303,7 @@ public final class ApiKeyServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
-        com.rapidapp.apikey.Apikey.DeleteApiKeyRequest request) {
+        io.rapidapp.apikey.Apikey.DeleteApiKeyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
@@ -331,15 +331,15 @@ public final class ApiKeyServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE:
-          serviceImpl.create((com.rapidapp.apikey.Apikey.CreateApiKeyRequest) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKey>) responseObserver);
+          serviceImpl.create((io.rapidapp.apikey.Apikey.CreateApiKeyRequest) request,
+              (io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKey>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.rapidapp.apikey.Apikey.ApiKeyList>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.rapidapp.apikey.Apikey.ApiKeyList>) responseObserver);
           break;
         case METHODID_DELETE:
-          serviceImpl.delete((com.rapidapp.apikey.Apikey.DeleteApiKeyRequest) request,
+          serviceImpl.delete((io.rapidapp.apikey.Apikey.DeleteApiKeyRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -364,21 +364,21 @@ public final class ApiKeyServiceGrpc {
           getCreateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.apikey.Apikey.CreateApiKeyRequest,
-              com.rapidapp.apikey.Apikey.ApiKey>(
+              io.rapidapp.apikey.Apikey.CreateApiKeyRequest,
+              io.rapidapp.apikey.Apikey.ApiKey>(
                 service, METHODID_CREATE)))
         .addMethod(
           getListMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.google.protobuf.Empty,
-              com.rapidapp.apikey.Apikey.ApiKeyList>(
+              io.rapidapp.apikey.Apikey.ApiKeyList>(
                 service, METHODID_LIST)))
         .addMethod(
           getDeleteMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
+              io.rapidapp.apikey.Apikey.DeleteApiKeyRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE)))
         .build();
@@ -390,7 +390,7 @@ public final class ApiKeyServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rapidapp.apikey.Apikey.getDescriptor();
+      return io.rapidapp.apikey.Apikey.getDescriptor();
     }
 
     @java.lang.Override
