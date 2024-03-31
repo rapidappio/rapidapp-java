@@ -6,7 +6,7 @@
 
     <groupId>io.rapidapp</groupId>
     <artifactId>rapidapp-java</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <developers>
         <developer>
@@ -147,6 +147,8 @@
                 <configuration>
                     <publishingServerId>central</publishingServerId>
                     <tokenAuth>true</tokenAuth>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
                 </configuration>
             </plugin>
 
