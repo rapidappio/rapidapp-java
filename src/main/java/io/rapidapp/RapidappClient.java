@@ -54,6 +54,15 @@ public class RapidappClient {
         PostgresOuterClass.Postgres postgres = stub.get(PostgresOuterClass.GetRequest.newBuilder().setId(id).build());
         return postgres;
     }
+
+    public void deletePostgresDatabase(String id) {
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(API_URL, API_PORT)
+                .useTransportSecurity()
+                .intercept(new ApiKeyInterceptor(apiKey))
+                .build();
+        PostgresServiceGrpc.PostgresServiceBlockingStub stub = PostgresServiceGrpc.newBlockingStub(channel);
+        stub.delete(PostgresOuterClass.DeleteRequest.newBuilder().setId(id).build());
+    }
 }
 
 class ApiKeyInterceptor implements ClientInterceptor {
